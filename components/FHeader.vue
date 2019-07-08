@@ -14,12 +14,11 @@
               :class="{ active: active == menu.id }"
               >{{ menu.name }}</a
             >
-            <a
-              target="_blank"
-              href="https://jbox.sjtu.edu.cn/l/0HRR1T"
-              v-else
-              >{{ menu.name }}</a
-            >
+          </li>
+          <li>
+            <a href="javascript:;" @click="showDownload"
+              >相关下载 <i class="el-icon-arrow-down"></i
+            ></a>
           </li>
         </ul>
       </div>
@@ -27,6 +26,16 @@
         <img src="~@/assets/images/ercode.jpg" alt="" />
       </div>
     </div>
+    <el-dialog :modal="false" title="相关下载" :visible.sync="dialog">
+      <div class="m-download">
+        <div class="item">
+          <a href="http://144.34.213.22/software/python-3.6.8-amd64.exe">
+            <div>python-3.6.8</div>
+            <p>点击下载</p>
+          </a>
+        </div>
+      </div>
+    </el-dialog>
   </header>
 </template>
 
@@ -57,19 +66,19 @@ export default {
         {
           name: '联系我们',
           id: 'contact'
-        },
-        {
-          name: '相关下载',
-          id: 'download'
         }
       ],
-      active: this.current
+      active: this.current,
+      dialog: false
     }
   },
   methods: {
     onSelect(item) {
       this.$emit('select', item.id)
       this.active = item.id
+    },
+    showDownload() {
+      this.dialog = true
     }
   }
 }
@@ -151,6 +160,39 @@ export default {
     img {
       height: 90px;
       width: 90px;
+    }
+  }
+}
+
+.m-download {
+  display: flex;
+  align-items: center;
+  .item {
+    width: 150px;
+    height: 100px;
+    display: flex;
+
+    a {
+      display: flex;
+      background-color: #333;
+
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      transition: 0.4s all;
+      flex-direction: column;
+      p {
+        font-size: 16px;
+        color: #eee;
+      }
+      &:hover {
+        background-color: #0371df;
+      }
     }
   }
 }
