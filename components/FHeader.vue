@@ -6,10 +6,20 @@
       </div>
       <div class="f-header__nav">
         <ul>
-          <li v-for="menu in menus" @click="onSelect(menu)" :key="menu.id">
-            <a href="javascript:;" :class="{ active: active == menu.id }">{{
-              menu.name
-            }}</a>
+          <li v-for="menu in menus" :key="menu.id">
+            <a
+              @click="onSelect(menu)"
+              href="javascript:;"
+              v-if="menu.id != 'download'"
+              :class="{ active: active == menu.id }"
+              >{{ menu.name }}</a
+            >
+            <a
+              target="_blank"
+              href="https://jbox.sjtu.edu.cn/l/0HRR1T"
+              v-else
+              >{{ menu.name }}</a
+            >
           </li>
         </ul>
       </div>
@@ -23,6 +33,12 @@
 <script>
 export default {
   name: 'FHeader',
+  props: {
+    current: {
+      type: String,
+      default: 'index'
+    }
+  },
   data() {
     return {
       menus: [
@@ -41,9 +57,13 @@ export default {
         {
           name: '联系我们',
           id: 'contact'
+        },
+        {
+          name: '相关下载',
+          id: 'download'
         }
       ],
-      active: 'index'
+      active: this.current
     }
   },
   methods: {
