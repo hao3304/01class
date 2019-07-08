@@ -1,7 +1,7 @@
 <template>
   <div class="f-index">
     <FHeader @select="goAnchor"></FHeader>
-    <div class="carousel">
+    <div id="index" class="carousel">
       <img class="cover" src="~@/assets/images/banner/1_1.png" alt="" />
       <img
         style="height: 100%;width: 100%"
