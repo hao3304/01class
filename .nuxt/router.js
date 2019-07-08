@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _78ecf2ae = () => interopDefault(import('..\\pages\\download.vue' /* webpackChunkName: "pages_download" */))
 const _9d5efcc8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 Vue.use(Router)
@@ -80,10 +79,6 @@ export function createRouter() {
     scrollBehavior,
 
     routes: [{
-      path: "/download",
-      component: _78ecf2ae,
-      name: "download"
-    }, {
       path: "/",
       component: _9d5efcc8,
       name: "index"
