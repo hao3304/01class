@@ -1,29 +1,37 @@
 <template>
   <div class="f-index">
     <FHeader @select="goAnchor"></FHeader>
-    <el-carousel
-      id="index"
-      :interval="5000"
-      :height="elHeight"
-      style="overflow: hidden"
-    >
-      <el-carousel-item>
-        <img class="cover" src="~@/assets/images/banner/1_1.png" alt="" />
-        <img
-          style="height: 100%;width: 100%"
-          src="~@/assets/images/banner/1.png"
-          alt=""
-        />
-      </el-carousel-item>
-      <el-carousel-item>
-        <img class="cover" src="~@/assets/images/banner/3_1.png" alt="" />
-        <img
-          style="height: 100%;width: 100%"
-          src="~@/assets/images/banner/3.png"
-          alt=""
-        />
-      </el-carousel-item>
-    </el-carousel>
+    <div class="carousel">
+      <img class="cover" src="~@/assets/images/banner/1_1.png" alt="" />
+      <img
+        style="height: 100%;width: 100%"
+        src="~@/assets/images/banner/1.png"
+        alt=""
+      />
+    </div>
+    <!--    <el-carousel-->
+    <!--      id="index"-->
+    <!--      :interval="5000"-->
+    <!--      :height="elHeight"-->
+    <!--      style="overflow: hidden"-->
+    <!--    >-->
+    <!--      <el-carousel-item>-->
+    <!--        <img class="cover" src="~@/assets/images/banner/1_1.png" alt="" />-->
+    <!--        <img-->
+    <!--          style="height: 100%;width: 100%"-->
+    <!--          src="~@/assets/images/banner/1.png"-->
+    <!--          alt=""-->
+    <!--        />-->
+    <!--      </el-carousel-item>-->
+    <!--      <el-carousel-item>-->
+    <!--        <img class="cover" src="~@/assets/images/banner/3_1.png" alt="" />-->
+    <!--        <img-->
+    <!--          style="height: 100%;width: 100%"-->
+    <!--          src="~@/assets/images/banner/3.png"-->
+    <!--          alt=""-->
+    <!--        />-->
+    <!--      </el-carousel-item>-->
+    <!--    </el-carousel>-->
     <section class="hp-why-study">
       <div class="page-common-title">
         <em>Why learning programming</em>
@@ -400,109 +408,246 @@
 
     <section class="hp-case-box">
       <div class="case-content">
-        <div class="case-list clearfix" id="partner_list">
-          <div>
-            <a href="javascript:;">
-              <div class="portr-img">
-                <span class="jqthumb">
-                  <img
-                    src="~/assets/images/20170420084036157.jpg"
-                    alt="Steve Jobs"
-                  />
-                </span>
+        <div
+          id="partner_list"
+          class="case-list clearfix slick-initialized slick-slider"
+        >
+          <div class="slick-list clearfix draggable" tabindex="0">
+            <div
+              class="slick-track"
+              style="opacity: 1; width: 4102px; transform: translate3d(-1172px, 0px, 0px);"
+            >
+              <div class="slick-slide slick-cloned" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420084423378.jpg"
+                        alt="Sergey Brin"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Sergey Brin</h6>
+                    <p>Google联合创始人</p>
+                    <p>8岁开始编程</p>
+                  </div></a
+                >
               </div>
-              <div class="case-brief">
-                <h6 style="font-size: 21px;">Steve Jobs</h6>
-                <p>Apple创始人</p>
-                <p>13岁开始编程</p>
+              <div class="slick-slide slick-cloned" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420085924905.jpg"
+                        alt="bill Gates "
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Bill Gates</h6>
+                    <p>微软创始人</p>
+                    <p>13岁开始编程</p>
+                  </div></a
+                >
               </div>
-            </a>
+              <div class="slick-slide slick-cloned" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170607114323785.jpg"
+                        alt="Elon Musk"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Elon Musk</h6>
+                    <p>Spacex创始人</p>
+                    <p>9岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170607114957292.jpeg"
+                        alt="DemisHassabis"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">DemisHassabis</h6>
+                    <p>AlphaGo创始人</p>
+                    <p>8岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-active" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420084036157.jpg"
+                        alt="Steve Jobs"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Steve Jobs</h6>
+                    <p>Apple创始人</p>
+                    <p>13岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-active" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420084323952.jpg"
+                        alt="Marl Zuckerberg"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Marl Zuckerberg</h6>
+                    <p>Facebook创始人</p>
+                    <p>10岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-active" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420084423378.jpg"
+                        alt="Sergey Brin"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Sergey Brin</h6>
+                    <p>Google联合创始人</p>
+                    <p>8岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-active" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420085924905.jpg"
+                        alt="bill Gates "
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Bill Gates</h6>
+                    <p>微软创始人</p>
+                    <p>13岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170607114323785.jpg"
+                        alt="Elon Musk"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Elon Musk</h6>
+                    <p>Spacex创始人</p>
+                    <p>9岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170607114957292.jpeg"
+                        alt="DemisHassabis"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">DemisHassabis</h6>
+                    <p>AlphaGo创始人</p>
+                    <p>8岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420084036157.jpg"
+                        alt="Steve Jobs"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Steve Jobs</h6>
+                    <p>Apple创始人</p>
+                    <p>13岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420084323952.jpg"
+                        alt="Marl Zuckerberg"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Marl Zuckerberg</h6>
+                    <p>Facebook创始人</p>
+                    <p>10岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420084423378.jpg"
+                        alt="Sergey Brin"
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Sergey Brin</h6>
+                    <p>Google联合创始人</p>
+                    <p>8岁开始编程</p>
+                  </div></a
+                >
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 293px;">
+                <a href="javascript:;"
+                  ><div class="portr-img">
+                    <span class="jqthumb"
+                      ><img
+                        src="/_nuxt/assets/images/20170420085924905.jpg"
+                        alt="bill Gates "
+                    /></span>
+                  </div>
+                  <div class="case-brief">
+                    <h6 style="font-size: 21px;">Bill Gates</h6>
+                    <p>微软创始人</p>
+                    <p>13岁开始编程</p>
+                  </div></a
+                >
+              </div>
+            </div>
           </div>
-          <div>
-            <a href="javascript:;">
-              <div class="portr-img">
-                <span class="jqthumb">
-                  <img
-                    src="~/assets/images/20170420084323952.jpg"
-                    alt="Marl Zuckerberg"
-                  />
-                </span>
-              </div>
-              <div class="case-brief">
-                <h6 style="font-size: 21px;">Marl Zuckerberg</h6>
-                <p>Facebook创始人</p>
-                <p>10岁开始编程</p>
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="javascript:;">
-              <div class="portr-img">
-                <span class="jqthumb">
-                  <img
-                    src="~/assets/images/20170420084423378.jpg"
-                    alt="Sergey Brin"
-                  />
-                </span>
-              </div>
-              <div class="case-brief">
-                <h6 style="font-size: 21px;">Sergey Brin</h6>
-                <p>Google联合创始人</p>
-                <p>8岁开始编程</p>
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="javascript:;">
-              <div class="portr-img">
-                <span class="jqthumb">
-                  <img
-                    src="~/assets/images/20170420085924905.jpg"
-                    alt="bill Gates "
-                  />
-                </span>
-              </div>
-              <div class="case-brief">
-                <h6 style="font-size: 21px;">Bill Gates</h6>
-                <p>微软创始人</p>
-                <p>13岁开始编程</p>
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="javascript:;">
-              <div class="portr-img">
-                <span class="jqthumb">
-                  <img
-                    src="~/assets/images/20170607114323785.jpg"
-                    alt="Elon Musk"
-                  />
-                </span>
-              </div>
-              <div class="case-brief">
-                <h6 style="font-size: 21px;">Elon Musk</h6>
-                <p>Spacex创始人</p>
-                <p>9岁开始编程</p>
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="javascript:;">
-              <div class="portr-img">
-                <span class="jqthumb">
-                  <img
-                    src="~/assets/images/20170607114957292.jpeg"
-                    alt="DemisHassabis"
-                  />
-                </span>
-              </div>
-              <div class="case-brief">
-                <h6 style="font-size: 21px;">DemisHassabis</h6>
-                <p>AlphaGo创始人</p>
-                <p>8岁开始编程</p>
-              </div>
-            </a>
-          </div>
+          <a href="javascript:;" class="slick-prev" style="display: block;"
+            ><span class="iconfont"></span></a
+          ><a href="javascript:;" class="slick-next" style="display: block;"
+            ><span class="iconfont"></span></a
+          >
         </div>
       </div>
     </section>
@@ -573,52 +718,7 @@ export default {
     }
   },
   methods: {
-    render() {
-      $('.case-list').slick({
-        slidesToShow: 4,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        speed: 300,
-        slidesToScroll: 1,
-        draggable: false,
-        slidePrev: '&#xe64e;',
-        slideNext: '&#xe75b;',
-        responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              slidePrev: '&#xe64e;',
-              slideNext: '&#xe75b;',
-              slidesToShow: 4
-            }
-          },
-          {
-            breakpoint: 992,
-            settings: {
-              slidePrev: '&#xe64e;',
-              slideNext: '&#xe75b;',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidePrev: '&#xe64e;',
-              slideNext: '&#xe75b;',
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 568,
-            settings: {
-              slidePrev: '&#xe64e;',
-              slideNext: '&#xe75b;',
-              slidesToShow: 1
-            }
-          }
-        ]
-      })
-    },
+    render() {},
     goAnchor(selector) {
       // document.querySelector('body').scrollTop =
       //   $('#' + selector).offset().top + 'px'
@@ -634,8 +734,6 @@ export default {
       this.width = document.documentElement.clientWidth
       this.height = document.documentElement.clientHeight
     }
-
-    this.render()
   }
 }
 </script>
