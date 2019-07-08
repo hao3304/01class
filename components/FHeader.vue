@@ -31,7 +31,7 @@
         <div class="item">
           <a href="http://144.34.213.22/software/python-3.6.8-amd64.exe">
             <div>python-3.6.8</div>
-            <p>点击下载</p>
+            <div class="p">点击下载</div>
           </a>
         </div>
       </div>
@@ -186,7 +186,7 @@ export default {
       text-align: center;
       transition: 0.4s all;
       flex-direction: column;
-      p {
+      .p {
         font-size: 16px;
         color: #eee;
       }
