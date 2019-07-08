@@ -15,27 +15,27 @@
               >{{ menu.name }}</a
             >
           </li>
-          <li>
-            <a href="javascript:;" @click="showDownload"
-              >相关下载 <i class="el-icon-arrow-down"></i
-            ></a>
-          </li>
+          <!--          <li>-->
+          <!--            <a href="javascript:;" @click="showDownload"-->
+          <!--              >相关下载 <i class="el-icon-arrow-down"></i-->
+          <!--            ></a>-->
+          <!--          </li>-->
         </ul>
       </div>
       <div class="f-header__code">
         <img src="~@/assets/images/ercode.jpg" alt="" />
       </div>
     </div>
-    <el-dialog :modal="false" title="相关下载" :visible.sync="dialog">
-      <div class="m-download">
-        <div class="item">
-          <a href="http://144.34.213.22/software/python-3.6.8-amd64.exe">
-            <div>python-3.6.8</div>
-            <div class="p">点击下载</div>
-          </a>
-        </div>
-      </div>
-    </el-dialog>
+    <!--    <el-dialog :modal="false" title="相关下载" :visible.sync="dialog">-->
+    <!--      <div class="m-download">-->
+    <!--        <div class="item">-->
+    <!--          <a href="http://144.34.213.22/software/python-3.6.8-amd64.exe">-->
+    <!--            <div>python-3.6.8</div>-->
+    <!--            <div class="p">点击下载</div>-->
+    <!--          </a>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </el-dialog>-->
   </header>
 </template>
 
